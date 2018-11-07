@@ -11,14 +11,13 @@ class BusinessList extends React.Component {
     return (
       //Listing restaurants
       <div className="BusinessList">
-        <Business />
-        <Business />
-        <Business />
-        <Business />
-        <Business />
-        <Business />
+      {
+        this.props.businesses.map(business => {
+          return <Business business={business} />;
+        })
+      }
       </div>
-    );
+    )
   }
 }
 
